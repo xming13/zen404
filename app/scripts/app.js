@@ -16,48 +16,30 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/error-1.html',
-        controller: 'Error1Ctrl'
+        redirectTo: '/error-1'
       })
       .when('/error-1', {
-        templateUrl: 'views/error-1.html',
-        controller: 'Error1Ctrl'
+        templateUrl: 'views/error-1.html'
       })
       .when('/error-2', {
-        templateUrl: 'views/error-2.html',
-        controller: 'Error2Ctrl'
+        templateUrl: 'views/error-2.html'
       })
       .when('/error-3', {
-        templateUrl: 'views/error-3.html',
-        controller: 'Error3Ctrl'
+        templateUrl: 'views/error-3.html'
       })
       .when('/error-4', {
-        templateUrl: 'views/error-4.html',
-        controller: 'Error4Ctrl'
+        templateUrl: 'views/error-4.html'
       })
       .when('/error-5', {
-        templateUrl: 'views/error-5.html',
-        controller: 'Error5Ctrl'
+        templateUrl: 'views/error-5.html'
       })
       .when('/error-6', {
-        templateUrl: 'views/error-6.html',
-        controller: 'Error6Ctrl'
+        templateUrl: 'views/error-6.html'
       })
       .when('/error-7', {
-        templateUrl: 'views/error-7.html',
-        controller: 'Error7Ctrl'
+        templateUrl: 'views/error-7.html'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/error-1'
       });
-  })
-  .run(function($rootScope, $location) {
-    $rootScope.nextError = function() {
-      console.log('next error');
-      $location.path('error-2');
-    };
-    
-    $rootScope.randomError = function() {
-      console.log('random error');
-    };
   });

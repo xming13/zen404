@@ -8,10 +8,37 @@
  * Controller of the zen404App
  */
 angular.module('zen404App')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+    $scope.nextError = function() {
+      var currentPath = $location.path();
+      if (currentPath.indexOf('/error-') === 0) {
+        var errorNumber = currentPath.charAt(7);
+        errorNumber = parseInt(errorNumber) + 1;
+        
+        // equivalent to !is_NaN
+        if (errorNumber === errorNumber) {
+          if (errorNumber >= 1 && errorNumber <= 7) {
+            return '#/error-' + errorNumber;
+          }
+          if (errorNumber == 8) {
+            return '#/error-1'; 
+          }
+        } 
+      }
+      
+      // assume user is at the home page which is showing error-1 page
+      return '#/error-2';
+    };
+    
+    $scope.randomError = function() {
+      var currentPath = $location.path();
+      var currentErrorNumber = currentPath.indexOf('/error-') === 0 ? currentPath.charAt(7) : -1;
+      
+      var randomErrorNumber;
+      do {
+        randomErrorNumber = Math.floor((Math.random() * 7) + 1);
+      } while (currentErrorNumber == randomErrorNumber)
+      
+      return '#/error-' + randomErrorNumber;
+    };
+  }]);
