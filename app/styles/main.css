@@ -30,6 +30,15 @@ body {
   margin: 0 auto;
 }
 
+.social-media {
+  padding-top: 15px;
+}
+
+/* Facebook */
+.fb-like.fb_iframe_widget {
+  overflow: hidden;
+}
+
 /* Custom page footer */
 .footer {
   height: 60px;
