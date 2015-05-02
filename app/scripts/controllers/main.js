@@ -18,16 +18,18 @@ angular.module('zen404App')
         // equivalent to !is_NaN
         if (errorNumber === errorNumber) {
           if (errorNumber >= 1 && errorNumber <= 7) {
-            return '#/error-' + errorNumber;
+            $location.path('/error-' + errorNumber);
+            return;
           }
           if (errorNumber == 8) {
-            return '#/error-1'; 
+            $location.path('/error-1');
+            return;
           }
         } 
       }
       
       // assume user is at the home page which is showing error-1 page
-      return '#/error-2';
+      $location.path('/error-2');  
     };
     
     $scope.randomError = function() {
@@ -39,6 +41,6 @@ angular.module('zen404App')
         randomErrorNumber = Math.floor((Math.random() * 7) + 1);
       } while (currentErrorNumber == randomErrorNumber)
       
-      return '#/error-' + randomErrorNumber;
+      $location.path('/error-' + randomErrorNumber);
     };
   }]);
