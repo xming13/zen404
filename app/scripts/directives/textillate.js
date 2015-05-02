@@ -13,13 +13,9 @@ angular.module('zen404App')
 		restrict: 'A',
 		link: function(scope, element, attrs) {
 			var $elem = angular.element(element);
-			var inEffect = $elem.data('inEffect') ? $elem.data('inEffect') : 'fadeInLeftBig';
 			var initialDelay = $elem.data('initialDelay') ? $elem.data('initialDelay') : 0;
 			$elem.textillate({
-				initialDelay: initialDelay,
-				in: {
-					effect: inEffect
-				}
+				initialDelay: initialDelay
 			});
 		}
 	};
