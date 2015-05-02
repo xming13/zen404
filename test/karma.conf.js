@@ -28,6 +28,8 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/letteringjs/jquery.lettering.js',
+      'bower_components/textillate/jquery.textillate.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
