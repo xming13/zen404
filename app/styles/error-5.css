@@ -1,0 +1,24 @@
+.error-5 {
+	position: relative;
+	width: 600px;
+	height: 400px;
+}
+
+.error-5 .error-text {
+	position: absolute;
+}
+
+.error-5 .error-text-1 {
+	top: 27px;
+  	left: 377px;
+}
+
+.error-5 .error-text-2 {
+  	top: 117px;
+  	left: 412px;
+}
+
+.error-5 .error-text-3 {
+  	top: 148px;
+  	left: 445px;
+}
