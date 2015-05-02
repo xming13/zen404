@@ -16,12 +16,8 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+        templateUrl: 'views/error-1.html',
+        controller: 'Error1Ctrl'
       })
       .when('/error-1', {
         templateUrl: 'views/error-1.html',
@@ -54,4 +50,14 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .run(function($rootScope, $location) {
+    $rootScope.nextError = function() {
+      console.log('next error');
+      $location.path('error-2');
+    };
+    
+    $rootScope.randomError = function() {
+      console.log('random error');
+    };
   });
