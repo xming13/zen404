@@ -50,6 +50,9 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>-->
 
+    <!-- Twitter -->
+    <script src="http://platform.twitter.com/widgets.js"></script>
+
     <div class="wrap">
       <div class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
@@ -72,7 +75,7 @@
             <a href fb-share class="facebook-share-button">
               <img src="images/fb-share.png" />
             </a>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+            <a href twitter-share></a>
           </div>
         </div>
       </div>
@@ -102,13 +105,6 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- Twitter -->
-    <script>
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-      if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
-      (document, 'script', 'twitter-wjs');
-    </script>
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -126,6 +122,7 @@
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/directives/textillate.js"></script>
     <script src="scripts/directives/fb-share.js"></script>
+    <script src="scripts/directives/twitter-share.js"></script>
     <!-- endbuild -->
 </body>
 </html>
