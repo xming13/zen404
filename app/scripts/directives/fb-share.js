@@ -10,7 +10,7 @@ angular.module('zen404App')
                 element.on('click', function(e) {
                     e.preventDefault();
                     
-                    var rootUrl = 'http://xming13/github.io/zen404/dist';
+                    var rootUrl = 'http://xming13.github.io/zen404/dist';
                     var name, path, caption, description, message;
                     
                     switch ($location.path()) {

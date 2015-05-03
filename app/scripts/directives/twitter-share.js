@@ -12,7 +12,7 @@ angular.module('zen404App')
                       'rendered',
                       function (event) {
                         if (angular.element(event.target).siblings().length > 0) {
-                            angular.element(event.target).prev().remove();
+                            angular.element(event.target).siblings().remove();
                         }
                       }
                     );
@@ -20,9 +20,9 @@ angular.module('zen404App')
                 );
 
                 $scope.$location = $location;
-                $scope.$watch('$location.absUrl()', function(newValue, oldValue) {
+                $scope.$watch('$location.absUrl()', function(newValue) {
                     $window.twttr.widgets.createShareButton(
-    					$location.absUrl(),
+    					newValue,
     					$element[0],
     					{
     						count: 'none',
