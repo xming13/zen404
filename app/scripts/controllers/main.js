@@ -21,7 +21,7 @@ angular.module('zen404App')
             $location.path('/error-' + errorNumber);
             return;
           }
-          if (errorNumber == 8) {
+          if (errorNumber === 8) {
             $location.path('/error-1');
             return;
           }
@@ -34,12 +34,12 @@ angular.module('zen404App')
     
     $scope.randomError = function() {
       var currentPath = $location.path();
-      var currentErrorNumber = currentPath.indexOf('/error-') === 0 ? currentPath.charAt(7) : -1;
+      var currentErrorNumber = currentPath.indexOf('/error-') === 0 ? parseInt(currentPath.charAt(7)) : -1;
       
       var randomErrorNumber;
       do {
         randomErrorNumber = Math.floor((Math.random() * 7) + 1);
-      } while (currentErrorNumber == randomErrorNumber)
+      } while (currentErrorNumber === randomErrorNumber);
       
       $location.path('/error-' + randomErrorNumber);
     };
