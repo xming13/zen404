@@ -43,3 +43,6 @@ angular
         redirectTo: '/error-1'
       });
   });
+  
+  // set textillate in delay default to 100
+  jQuery.fn.textillate.defaults.in.delay = 100;
