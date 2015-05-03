@@ -20,12 +20,6 @@ body {
   margin: 0 auto -60px;
 }
 
-.header,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .content-error {
   margin: 0 auto;
 }
@@ -34,35 +28,20 @@ body {
   padding-top: 15px;
 }
 
-/* Facebook */
+/* Facebook like widget */
 .fb-like.fb_iframe_widget {
   overflow: hidden;
 }
 
-/* Custom page footer */
 .footer {
   height: 60px;
-  margin: 0 20px;
-  padding: 19px 0 0;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  
-  .footer {
-    margin: 0;
-    padding: 19px 20px 0;
-  }
+.fa-twitter {
+  color: #55ACEE;
+}
+.fa-behance {
+  color: #369BD1;
 }
