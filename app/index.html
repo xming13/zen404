@@ -33,6 +33,14 @@
     <!-- Facebook -->
     <div id="fb-root"></div>
     <script>
+      (function() {
+          var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1649158371981046';
+          document.getElementById('fb-root').appendChild(e);
+      }());
+    </script>
+<!--    <script>
       (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
@@ -40,7 +48,7 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=1649158371981046";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
-    </script>
+    </script>-->
 
     <div class="wrap">
       <div class="navbar navbar-default" role="navigation">
@@ -61,7 +69,9 @@
             <li><a href ng-click="randomError()">Random</a></li>
           </ul>
           <div class="nav navbar-nav pull-right social-media">
-            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
+            <a href fb-share class="facebook-share-button">
+              <img src="images/fb-share.png" />
+            </a>
             <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
           </div>
         </div>
@@ -115,6 +125,7 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/directives/textillate.js"></script>
+    <script src="scripts/directives/fb-share.js"></script>
     <!-- endbuild -->
 </body>
 </html>

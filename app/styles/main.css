@@ -33,6 +33,11 @@ body {
   overflow: hidden;
 }
 
+.facebook-share-button {
+  vertical-align: top;
+  display: inline-block;
+}
+
 .footer {
   height: 60px;
   color: #777;
