@@ -42,12 +42,34 @@ body {
 .footer {
   height: 60px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+}
+
+.twitter-link,
+.behance-link {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  text-align: center;
 }
 
 .fa-twitter {
-  color: #55ACEE;
+  width: 100%;
+  line-height: 60px;
+  background: #55acee;
+  color: #fff;
 }
+
+.fa-twitter:hover {
+  background: rgba(0, 172, 237, .7);
+}
+
 .fa-behance {
-  color: #369BD1;
+  line-height: 60px;
+  width: 100%;
+  background: #1769ff;
+  color: #fff;
+}
+
+.fa-behance:hover {
+  background: rgba(2, 77, 255, .7);
 }
