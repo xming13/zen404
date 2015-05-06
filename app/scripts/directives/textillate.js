@@ -11,7 +11,7 @@ angular.module('zen404App')
   .directive('textillate', function () {
     return {
 		restrict: 'A',
-		link: function(scope, element, attrs) {
+		link: function(scope, element) {
 			var $elem = angular.element(element);
 			
 			// have to manually pass in the initialDelay from data attributes due to a bug(?) in textillate 
