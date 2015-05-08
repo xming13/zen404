@@ -1,38 +1,41 @@
 'use strict';
 
 angular.module('zen404App')
-  .directive('twitterShare', ['$window', '$location',
-    function($window, $location) {
-        return {
-            restrict: 'A',
-            link: function($scope, $element) {
-                $window.twttr.ready(
-                  function (twttr) {                    
-                    twttr.events.bind(
-                      'rendered',
-                      function (event) {
-                        if (angular.element(event.target).siblings().length > 0) {
-                            angular.element(event.target).siblings().remove();
+    .directive('twitterShare', ['$window', '$location',
+        function ($window, $location) {
+            return {
+                restrict: 'A',
+                link: function (scope, element) {
+                    element.on('click', function (e) {
+                        e.returnValue = false;
+                        if (e.prevenDefault) {
+                            e.preventDefault();
                         }
-                      }
-                    );
-                  }
-                );
 
-                $scope.$location = $location;
-                $scope.$watch('$location.absUrl()', function(newValue) {
-                    $window.twttr.widgets.createShareButton(
-    					newValue,
-    					$element[0],
-    					{
-    						count: 'none',
-    						text: 'Animated haiku 404 error messages - ',
-                            related: 'tabrischen',
-                            via: 'tabrischen'
-    					}
-    				);    
-                });
-            }
-        };
-    }
-]);
+                        var windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+                            width = 550,
+                            height = 420,
+                            winHeight = screen.height,
+                            winWidth = screen.width;
+                        var left = Math.round((winWidth / 2) - (width / 2));
+                        var top = 0;
+
+                        if (winHeight > height) {
+                            top = Math.round((winHeight / 2) - (height / 2));
+                        }
+
+                        var url = encodeURIComponent($location.absUrl());
+                        var count = 'none';
+                        var text = encodeURIComponent('Animated haiku 404 error messages - ');
+                        var related = 'tabrischen';
+                        var via = 'tabrischen';
+
+                        var queryString = 'url=' + url + '&text=' + text + '&related=' + related + '&via=' + via + '&count=' + count;
+
+                        window.open('https://twitter.com/share?' + queryString, 'share', windowOptions + ',width=' + width +
+                            ',height=' + height + ',left=' + left + ',top=' + top);
+                    });
+                }
+            };
+        }
+    ]);
