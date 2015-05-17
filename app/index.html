@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="node_modules/mfb/src/mfb.css"/>
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/error-1.css">
-    <link rel="stylesheet" href="styles/error-2.css">
-    <link rel="stylesheet" href="styles/error-3.css">
-    <link rel="stylesheet" href="styles/error-4.css">
-    <link rel="stylesheet" href="styles/error-5.css">
-    <link rel="stylesheet" href="styles/error-6.css">
-    <link rel="stylesheet" href="styles/error-7.css">
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/error-1.css"/>
+    <link rel="stylesheet" href="styles/error-2.css"/>
+    <link rel="stylesheet" href="styles/error-3.css"/>
+    <link rel="stylesheet" href="styles/error-4.css"/>
+    <link rel="stylesheet" href="styles/error-5.css"/>
+    <link rel="stylesheet" href="styles/error-6.css"/>
+    <link rel="stylesheet" href="styles/error-7.css"/>
     <!-- endbuild -->    
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   </head>
@@ -56,8 +57,6 @@
   
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href ng-click="nextError()">Next</a></li>
-            <li><a href ng-click="randomError()">Random</a></li>
           </ul>
           <div class="nav navbar-nav pull-right social-media">
             <a href fb-share class="facebook-share-button">
@@ -77,6 +76,20 @@
       </a><a class="behance-link" href="https://www.behance.net/tabrischen1cad" target="_blank">
           <i class="fa fa-behance fa-2x"></i>
       </a>
+    </div>
+    <div class="mfb-button-container">
+      <ul class="mfb-component--br" data-mfb-toggle="hover">
+        <li class="mfb-component__wrap">
+          <a ng-click="randomError()" data-mfb-label="Random" class="mfb-component__button--main">
+            <i class="mfb-component__child-icon fa fa-random"></i>
+          </a>
+        </li>
+        <li class="mfb-component__wrap">
+          <a ng-click="nextError()" data-mfb-label="Next" class="mfb-component__button--main">
+            <i class="mfb-component__child-icon fa fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
